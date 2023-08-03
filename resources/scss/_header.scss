@@ -1,0 +1,22 @@
+@use 'vars' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: $white;
+
+    img {
+        max-width: 70px;
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    }
+}
