@@ -18,7 +18,7 @@
 
 
   {{-- Main --}}
-  @yield('main.content')
+  @yield('main-content')
 
 
   {{-- Footer --}}
