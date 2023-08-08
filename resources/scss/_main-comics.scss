@@ -14,10 +14,13 @@
     #current-series {
         padding-top: $rem250;
         padding-bottom: $rem250;
+        background-color: #1c1c1c;
+        color: $white;
     }
 
     .card-container {
         display: flex;
+        flex-wrap: wrap;
     }
 
     .card {
@@ -28,6 +31,11 @@
     .img-card {
         max-width: 100%;
         height: 200px; 
+    }
+
+    h3 {
+        margin: $rem1 0;
+        font-size: $rem1;
     }
 }
 

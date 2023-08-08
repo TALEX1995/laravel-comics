@@ -11,14 +11,15 @@
 
     <section id="current-series">
       <div class="container card-container">
-        <div class="card">
-          <div>
-            <img class="img-card"
-              src="https://e0.pxfuel.com/wallpapers/416/298/desktop-wallpaper-superman-cartoon-superman-comic-book-thumbnail.jpg"
-              alt="">
+
+        @foreach ($series as $serie)
+          <div class="card">
+            <div>
+              <img class="img-card" src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
+            </div>
+            <h3>{{ $serie['series'] }}</h3>
           </div>
-          <h3>Action Comics</h3>
-        </div>
+        @endforeach
       </div>
 
     </section>
