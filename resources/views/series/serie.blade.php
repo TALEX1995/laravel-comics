@@ -37,19 +37,20 @@
     {{-- Author section --}}
     <div class="bg-gray">
       <div class="small-container serie-author d-flex">
-        <div class="width-50">
+        {{-- Talent --}}
+        <div class="width-50 talent">
           <h2>Talent</h2>
           {{-- Art by --}}
-          <div class="d-flex justify-content-between">
+          <div class="artists">
             <div class="font-weight-bold">Art by:</div>
-            <p>
+            <div>
               @foreach ($serie['artists'] as $artist)
                 {{ $artist }}@php echo !$loop->last ? ',' : '.' @endphp
               @endforeach
-            </p>
+            </div>
           </div>
           {{-- Written by --}}
-          <div class="d-flex justify-content-between">
+          <div class="writers">
             <div class="font-weight-bold">Written by:</div>
             <p>
               @foreach ($serie['writers'] as $writer)
@@ -58,8 +59,31 @@
             </p>
           </div>
         </div>
-        <div class="width-50">
 
+        {{-- Spec --}}
+        <div class="width-50 spec">
+          <h2>Specs</h2>
+          {{-- Series --}}
+          <div class="d-flex">
+            <div class="font-weight-bold width-40">Series:</div>
+            <div>
+              {{ strtoupper($serie['series']) }}
+            </div>
+          </div>
+          {{-- Price --}}
+          <div class="d-flex">
+            <div class="font-weight-bold width-40">U.S. Price:</div>
+            <div>
+              {{ strtoupper($serie['price']) }}
+            </div>
+          </div>
+          {{-- Sale --}}
+          <div class="d-flex">
+            <div class="font-weight-bold width-40">On Sale Date:</div>
+            <div>
+              {{ strtoupper($serie['sale_date']) }}
+            </div>
+          </div>
         </div>
       </div>
     </div>

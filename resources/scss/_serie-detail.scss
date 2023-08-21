@@ -55,15 +55,33 @@
 
     .serie-author {
         padding-top: 50px;
+        
 
         h2 {
             padding-bottom: $rem1;
-            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .artists , .writers {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            border-top: 1px solid #f0f0f0; 
+            padding: 5px 0;
         }
     }
 
     .bg-gray {
         background-color: #f6f6f6;
         margin-top: 50px;
+    }
+
+    .spec {
+        padding-left: 20px;
+
+        .d-flex {
+            padding: 5px 0;
+            border-top: 1px solid #f0f0f0;
+            
+        }
     }
 }
