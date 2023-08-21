@@ -1,7 +1,7 @@
 @use 'vars' as *;
 
 .main-comics {
-    color: white;
+    color: $white;
 
     .jumbotron {
         height: 500px;
@@ -18,6 +18,10 @@
         padding-bottom: $rem250;
         background-color: #1c1c1c;
         color: $white;
+
+        a {
+            color: $white;
+        }
     }
 
     .card-container {

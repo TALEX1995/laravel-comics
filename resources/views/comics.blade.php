@@ -22,10 +22,12 @@
         {{-- Foreach to create card --}}
         @foreach ($series as $serie)
           <div class="card">
-            <div>
-              <img class="img-card" src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
-            </div>
-            <h3>{{ $serie['series'] }}</h3>
+            <a href="#">
+              <div>
+                <img class="img-card" src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
+              </div>
+              <h3>{{ $serie['series'] }}</h3>
+            </a>
           </div>
         @endforeach
       </div>
