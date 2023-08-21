@@ -23,3 +23,12 @@ Route::get('/comics', function () {
     $series = config('series');
     return view('comics', compact('series'));
 })->name('comics');
+
+// Serie detail
+Route::get('/comics/{index}', function ($index) {
+    $series = config('series');
+
+    $serie = $series[$index];
+
+    return view('series.serie', compact('serie'));
+})->name('comics.detail');

@@ -19,5 +19,15 @@ header {
             margin-right: 10px;
             margin-left: 10px;
         }
+    }   
+}
+
+.jumbotron {
+    height: 500px;
+    img {
+        max-height: 100%;
+        width: 100%;
+        object-position: top center;
+        object-fit: cover;
     }
 }

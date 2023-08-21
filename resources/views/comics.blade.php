@@ -6,9 +6,7 @@
 
   {{-- Jumbo --}}
   <main class="main-comics">
-    <section class="jumbotron">
-      <img src="{{ Vite::asset('resources/images/jumbotron.jpg') }}" alt="Jumbo">
-    </section>
+
 
     {{-- Label Card Section --}}
     <div class="container">
@@ -22,12 +20,12 @@
         {{-- Foreach to create card --}}
         @foreach ($series as $serie)
           <div class="card">
-            <a href="#">
-              <div>
-                <img class="img-card" src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
-              </div>
-              <h3>{{ $serie['series'] }}</h3>
-            </a>
+            {{-- <a href="{{ route('comics.detail') }}"> --}}
+            <div>
+              <img class="img-card" src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
+            </div>
+            <h3>{{ $serie['series'] }}</h3>
+            {{-- </a> --}}
           </div>
         @endforeach
       </div>

@@ -40,4 +40,9 @@
     <label for="search">Search</label>
     <input id="search" type="text">
   </div>
+
 </header>
+
+<section class="jumbotron">
+  <img src="{{ Vite::asset('resources/images/jumbotron.jpg') }}" alt="Jumbo">
+</section>

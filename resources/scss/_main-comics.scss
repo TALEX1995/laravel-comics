@@ -3,16 +3,6 @@
 .main-comics {
     color: $white;
 
-    .jumbotron {
-        height: 500px;
-        img {
-            max-height: 100%;
-            width: 100%;
-            object-position: top center;
-            object-fit: cover;
-        }
-    }
-
     #current-series {
         padding-top: $rem250;
         padding-bottom: $rem250;
