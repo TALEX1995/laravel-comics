@@ -4,6 +4,16 @@
 
 @section('main-content')
   <section id="serie-detail">
+    {{-- Comic Book --}}
+    <div class="small-container">
+      <div class="comic-book">
+        <div class="img-container">
+          <img src="{{ $serie['thumb'] }}" alt="{{ $serie['title'] }}">
+          <div class="book">COMIC BOOK</div>
+          <div class="gallery">VIEW GALLERY</div>
+        </div>
+      </div>
+    </div>
     <div class="small-container serie-description">
       {{-- Description --}}
       <div class="width-70">
@@ -12,7 +22,8 @@
         <div class="width-100 d-flex">
           <div class="width-70 d-flex justify-content-between">
             <div>
-              <span class="text-serie-light-green">U.S. Price: </span> <span class="text-white">{{ $serie['price'] }}</span>
+              <span class="text-serie-light-green">U.S. Price: </span> <span
+                class="text-white">{{ $serie['price'] }}</span>
             </div>
             <div>
               <span class="text-serie-light-green pe-1">AVAILABLE</span>
@@ -52,11 +63,11 @@
           {{-- Written by --}}
           <div class="writers">
             <div class="font-weight-bold">Written by:</div>
-            <p>
+            <div>
               @foreach ($serie['writers'] as $writer)
                 {{ $writer }}@php echo !$loop->last ? ',' : '.' @endphp
               @endforeach
-            </p>
+            </div>
           </div>
         </div>
 
