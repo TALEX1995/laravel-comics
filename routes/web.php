@@ -1,5 +1,6 @@
 <?php
 
+use Hamcrest\Type\IsNumeric;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,18 +26,14 @@ Route::get('/comics', function () {
 })->name('comics');
 
 // Serie detail
-// Route::get('/comics/{index}', function ($index) {
-//     $series = config('series');
-
-//     $serie = $series[$index];
-
-//     return view('series.serie', compact('serie'));
-// })->name('comics.detail');
-
-Route::get('/comics/1', function () {
+Route::get('/comics/{index}', function ($index) {
     $series = config('series');
 
-    $serie = $series[0];
+    if (!is_numeric($index) || $index < 0 || $index >= count($series)) {
+        abort(404);
+    }
+
+    $serie = $series[$index];
 
     return view('series.serie', compact('serie'));
 })->name('comics.detail');
