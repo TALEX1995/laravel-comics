@@ -3,6 +3,39 @@
 #serie-detail {
     padding-top: 50px;
 
+
+    .comic-book {
+        .img-container {
+            position: relative;
+            width: 300px;
+            margin-top: -200px;
+            margin-bottom: 80px;
+        }
+
+        .book , .gallery {
+            position: absolute;
+            background-color: $lightblue;
+            padding: 6px;
+            color: $white;
+        }
+
+        .book {
+            top: 0;
+        }
+
+        .gallery {
+            bottom: 0;
+            right: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
     h1 {
         font-size: $rem2;
         color: $darkblue;
@@ -63,10 +96,13 @@
 
         .artists , .writers {
             display: flex;
-            justify-content: space-between;
-            width: 100%;
             border-top: 1px solid #f0f0f0; 
             padding: 5px 0;
+            width: 100%;
+
+            .font-weight-bold {
+                width: 30%;
+            }
         }
     }
 
