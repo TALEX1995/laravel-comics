@@ -25,10 +25,18 @@ Route::get('/comics', function () {
 })->name('comics');
 
 // Serie detail
-Route::get('/comics/{index}', function ($index) {
+// Route::get('/comics/{index}', function ($index) {
+//     $series = config('series');
+
+//     $serie = $series[$index];
+
+//     return view('series.serie', compact('serie'));
+// })->name('comics.detail');
+
+Route::get('/comics/1', function () {
     $series = config('series');
 
-    $serie = $series[$index];
+    $serie = $series[0];
 
     return view('series.serie', compact('serie'));
 })->name('comics.detail');

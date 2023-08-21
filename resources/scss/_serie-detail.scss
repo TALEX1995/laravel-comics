@@ -1,0 +1,41 @@
+@use 'vars' as *;
+
+#serie-detail {
+    padding-top: 50px;
+
+    h1 {
+        font-size: $rem2;
+        color: $darkblue;
+    }
+
+    .serie-description {
+        display: flex;
+
+        div:first-child {
+            width: 70%;
+
+            h1 {
+                padding-bottom: $rem1;
+            }
+
+            p {
+                color: $textgray;
+                font-size: $rem125;
+                line-height: 1.2;
+            }
+        }
+
+        .advertisement {
+            width: 30%;
+
+            h3 {
+                text-align: right;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
