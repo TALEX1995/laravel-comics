@@ -1,3 +1,5 @@
+@use 'vars' as *;
+
 .d-flex {
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +35,10 @@
     width: 70%;
 }
 
+.width-50 {
+    width: 50%;
+}
+
 .text-serie-light-green {
     color: #a0f994;
 }
@@ -41,3 +47,14 @@
     color: white;
 }
 
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.pe-1 {
+    padding-right: $rem1;
+}
+
+.font-weight-bold {
+    font-weight: 800;
+}
